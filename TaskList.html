@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src = "taskssupport.js"></script>
+<link rel="stylesheet" type="text/css" href="css3clock.css" />
+<script>
+//function that allows us to get cookie variables
+function get_cookie ( cookie_name )
+{
+  // http://www.thesitewizard.com/javascripts/cookies.shtml
+  var cookie_string = document.cookie ;
+
+  if (cookie_string.length != 0) {
+
+    var cookie_start = cookie_string.search(cookie_name + "=") + cookie_name.length + 1;
+    var cookie_value = cookie_string.slice(cookie_start);
+    return cookie_value;
+  }
+  return '' ;
+}
+
+</script>
+
+<!-- Styling for task lists and task list wrappers-->
+<style> 
+.Tasks{ list-style-type: none; padding: 0px; margin:0px;height: 70%; overflow:auto;} 
+.TaskHolder{float:left; display:inline; width: 30%; padding: 10px; margin-right: 25px; border-right:thick solid black; height:100%;}
+h2{text-align:center; display:inline;}
+button{display:inline;}
+#Dailytasksholder{
+	width:20%;
+	border-right: 0px;
+}
+body{
+    background-color: 	#c8ffc8;
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<div class= "TaskHolder">
+<h2> Self Study </h2>
+<button class="addButton"> Add Tasks</button>
+<ul class = "Tasks Tasks1" style>
+	<li> Dummy task </li>
+</ul>
+</div>
+
+<div class = "TaskHolder">
+<h2> Errands </h2>
+<button class="addButton"> Add Tasks</button>
+<ul class = "Tasks Tasks2" style>
+	<li> Dummy task </li>
+</ul>
+</div>
+
+<div class= "TaskHolder" id= "Dailytasksholder">
+<h2> Daily Tasks </h2>
+<button class="addButton"> Add Tasks</button>
+<ul class = "Tasks Tasks1" style>
+	<li> Dummy task </li>
+</ul>
+</div>
+
+</body>
+</html>
